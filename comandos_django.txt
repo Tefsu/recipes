@@ -1,0 +1,5 @@
+
+Reunir todos os arquivos estaticos em uma só pasta
+ - python manage.py collectstatic
+
+Sempre que possivel usar namespace para evitar colisão de arquivos.
