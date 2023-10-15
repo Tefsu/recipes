@@ -3,3 +3,10 @@ Reunir todos os arquivos estaticos em uma só pasta
  - python manage.py collectstatic
 
 Sempre que possivel usar namespace para evitar colisão de arquivos.
+
+PATH CONVERTERS
+    STR: padrao
+    INT: aceita 0 ou qualquer numero inteiro positivo
+    SLUG: aceita qualquer string ASCII letras ou numeros e outros caracteres como  -_
+    UUID: aceita formato UUID por exemplo 075194d3-6885-417e-a8a8-6c931e272f00
+    PATH: Corresponde a qualquer string não vazia, incluindo o separador de caminho, '/'. Isso permite que você compare um caminho de URL completo em vez de um segmento de um caminho de URL como acontece com str.
