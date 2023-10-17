@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings
 
 # HTTP REQUEST
 
@@ -24,3 +26,6 @@ urlpatterns = [
     path('', include('recipes.urls')),
     # path('recipes/', include('recipes.urls')), # dominio/recipes/<pagina>
 ]
+
+urlpatterns += static(prefix=settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(prefix=settings.STATIC_URL, document_root=settings.STATIC_ROOT)

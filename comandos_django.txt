@@ -14,3 +14,32 @@ PATH CONVERTERS
 APLICA AS MIGRARIONS AO BD
     python manage.py migrate (aplica as migrações)
     python manage.py makemigrations (prepara as migrações)
+
+CRIAR SUPERUSER DJANGO
+    python manage.py createsuperuser
+    user: tefsu
+    email: tefersondeveloper@gmail.com
+    password: testuser2023
+
+ACESSA O SHELL
+    python manage.py shell
+    
+OBS:
+    recipe._meta.get_fields() só funciona caso use um for ou faça um for
+
+SALVA ALGO NO BD
+    >>> new_category = Category()
+    >>> new_category.name = 'Almoço' 
+    >>> new_category
+    <Category: Almoço>
+    >>> new_category.save()
+    .objects.create(name="") #já salva os dados no bd mas é necessario já passar os parametros para não criar linhas vazias
+
+ATUALIZA ALGO NO BD
+    (só funciona caso a variavel esteja com o valor do bd salvo nela)
+    >> new_category.name = 'novo nome'
+    >> new_category.save() 
+
+APAGAR ALGO NO BD
+    (só funciona caso a variavel esteja com o valor do bd salvo nela)
+    >> new_category.delet()
