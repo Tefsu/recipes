@@ -10,3 +10,7 @@ PATH CONVERTERS
     SLUG: aceita qualquer string ASCII letras ou numeros e outros caracteres como  -_
     UUID: aceita formato UUID por exemplo 075194d3-6885-417e-a8a8-6c931e272f00
     PATH: Corresponde a qualquer string não vazia, incluindo o separador de caminho, '/'. Isso permite que você compare um caminho de URL completo em vez de um segmento de um caminho de URL como acontece com str.
+
+APLICA AS MIGRARIONS AO BD
+    python manage.py migrate (aplica as migrações)
+    python manage.py makemigrations (prepara as migrações)
