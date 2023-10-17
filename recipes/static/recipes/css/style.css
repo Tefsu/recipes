@@ -171,6 +171,7 @@ a {
 
 .recipe-list-item {
     max-width: 64rem;
+    height: fit-content;
 }
 
 .recipe-list-item:hover {
@@ -181,6 +182,11 @@ a {
 .recipe-tittle-container {
     padding: var(--spacing-gutter-medium);
     padding-bottom: 2rem;
+}
+
+.recipe-tittle-container a{
+    text-decoration: none;
+    color: var(--color-primary-dark);
 }
 
 .recipe-author {
@@ -260,4 +266,8 @@ a {
 
 .main-footer a:hover{
     filter: brightness(.8);
+}
+
+.preparation-steps {
+    padding: var(--spacing-gutter-medium);
 }
