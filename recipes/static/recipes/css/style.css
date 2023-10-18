@@ -165,8 +165,14 @@ a {
     overflow: hidden;
 }
 
+.recipe-cover{
+    max-width: 100%;
+    /* width: fit-content; */
+}
+
 .recipe img{
     max-width: 100%;
+    /* width: fit-content; */
 }
 
 .recipe-list-item {

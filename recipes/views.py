@@ -8,13 +8,15 @@ def home(request):
     # Return HTTP Response
     # return HttpResponse('Home recipes')
 
-    categorias = Category.objects.all()
+    # categorias = Category.objects.all()
     # print(categorias)
 
     # categorias.order_by('-id')
     # print(categorias)
 
-    receitas = Recipe.objects.all()
+    receitas = Recipe.objects.all().order_by('-id')
+    # print(receitas.created_at)
+    # print(receitas.updated_at)
     # print(receitas)
     
     return render(request, 'recipes/pages/home.html', status=200, context={
@@ -27,3 +29,13 @@ def recipe(request, id):
         'recipe': receita,
         'is_detail_page': True,
     }) # Recomendado uso de namespace para evitar colisões e confusões no codigo
+
+def category(request, category_id):
+    # categoria = Category.objects.all().order_by(id=category_id)
+    receita = Recipe.objects.filter(
+        category__id=category_id
+    ).order_by('-id')
+    
+    return render(request, 'recipes/pages/home.html', status=200, context={
+        'recipes': receita,
+    }) #
