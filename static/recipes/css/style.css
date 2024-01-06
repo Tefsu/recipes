@@ -251,3 +251,24 @@ a {
 .main-footer a:hover{
     filter: brightness(.8);
 }
+
+.preparation-steps h1,
+.preparation-steps h2,
+.preparation-steps h3,
+.preparation-steps h4,
+.preparation-steps h5,
+.preparation-steps h6,
+.preparation-steps p,
+.preparation-steps ul,
+.preparation-steps ol,
+.preparation-steps li,
+.preparation-steps span,
+.preparation-steps b {
+    margin: 2rem 0;
+}
+
+.preparation-steps ol,
+.preparation-steps li {
+    margin: 2rem;
+    padding: 0 2rem;
+}

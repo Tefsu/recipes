@@ -43,3 +43,7 @@ ATUALIZA ALGO NO BD
 APAGAR ALGO NO BD
     (só funciona caso a variavel esteja com o valor do bd salvo nela)
     >> new_category.delet()
+
+CRIAR USUARIO VIA SHELL
+    from django.contrib.auth.models import User
+    User.objects.create_user(first_name='', last_name='', username='', email='', password='')

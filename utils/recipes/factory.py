@@ -28,6 +28,7 @@ def make_recipe():
             'last_name': fake.last_name(),
         },
         'category': {
+            'id': fake.random_number(digits=1, fix_len=True),
             'name': fake.word()
         },
         'cover': {
